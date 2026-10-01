@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos y delegación</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>Eventos y delegación</h1>
+
+    <h2>target vs currentTarget</h2>
+    <button id="boton-anidado" class="boton-grande">
+      Haz click aquí
+      <span class="icono-interno">👉</span>
+    </button>
+    <p id="resultado-target"></p>
+
+    <h2>Delegación de eventos</h2>
+    <p>
+      En vez de poner un listener en cada <code>&lt;li&gt;</code>, hay UN
+      solo listener en la lista <code>&lt;ul&gt;</code> que usa
+      <code>event.target</code> y <code>closest()</code> para saber en
+      qué elemento concreto se hizo click.
+    </p>
+    <ul id="lista-tareas">
+      <li>
+        <span class="texto-tarea">Repasar closures</span>
+        <button class="boton-borrar">Borrar</button>
+      </li>
+      <li>
+        <span class="texto-tarea">Practicar delegación</span>
+        <button class="boton-borrar">Borrar</button>
+      </li>
+      <li>
+        <span class="texto-tarea">Entregar la misión</span>
+        <button class="boton-borrar">Borrar</button>
+      </li>
+    </ul>
+    <button id="boton-nueva-tarea">Añadir tarea</button>
+  </body>
+</html>

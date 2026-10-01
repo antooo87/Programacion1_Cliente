@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>defer / async / type="module"</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Abre la consola del navegador (F12) ANTES de recargar la página
+         y mira en qué orden aparecen estos mensajes. -->
+    <script src="script-async.js" async></script>
+    <script src="script-defer.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>defer / async / type="module"</h1>
+    <p>Abre la consola (F12) y recarga la página para ver el orden de ejecución.</p>
+    <p id="resultado">Mira la consola...</p>
+  </body>
+</html>

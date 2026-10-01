@@ -1,0 +1,89 @@
+/* Mobile first: los estilos "base" son los del móvil.
+   Las media queries con min-width AÑADEN estilos para pantallas más grandes,
+   nunca los quitan. Así se evita pelear contra el CSS en cascada. */
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Base: una sola columna, como en un móvil estrecho */
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.tarjeta {
+  background: #eef2ff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* A partir de 600px (tablet pequeña) pasamos a 2 columnas */
+@media (min-width: 600px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* A partir de 900px (escritorio) pasamos a 3 columnas */
+@media (min-width: 900px) {
+  .tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* orientation: landscape se cumple cuando el ancho es mayor que el alto,
+   independientemente del tamaño físico de la pantalla */
+.aviso-orientacion {
+  padding: 0.75rem;
+  background: #fde68a;
+}
+
+@media (orientation: landscape) {
+  .aviso-orientacion {
+    background: #86efac;
+  }
+}
+
+/* hover solo tiene sentido con un puntero real (ratón).
+   En táctil, (hover: hover) no se cumple, así que no dependemos
+   de un :hover para que algo sea usable */
+.boton-hover {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #4338ca;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .boton-hover:hover {
+    background: #4338ca;
+    color: white;
+  }
+}
+
+/* prefers-color-scheme refleja la preferencia del SISTEMA OPERATIVO,
+   no un interruptor dentro de la página */
+.aviso-esquema {
+  padding: 0.75rem;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aviso-esquema {
+    background: #1e293b;
+    color: #f1f5f9;
+  }
+}
+
+#info-ancho {
+  font-weight: bold;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom properties (variables CSS)</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>Variables CSS</h1>
+
+    <p>
+      Este párrafo hereda <code>--color-texto</code> del
+      <code>:root</code>, porque es un elemento normal del documento.
+    </p>
+
+    <div class="caja-especial">
+      <p>
+        Este párrafo está dentro de <code>.caja-especial</code>, que
+        SOBRESCRIBE <code>--color-acento</code> solo para sí misma y sus
+        hijos.
+      </p>
+    </div>
+
+    <div class="caja-destacada" id="caja-destacada">
+      Caja con color de acento aplicado
+    </div>
+
+    <div class="controles">
+      <label>
+        Acento global (documentElement):
+        <input type="color" id="selector-acento-global" value="#4338ca" />
+      </label>
+      <label>
+        Acento solo de esta caja (elemento concreto):
+        <input type="color" id="selector-acento-local" value="#16a34a" />
+      </label>
+    </div>
+  </body>
+</html>

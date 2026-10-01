@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media queries — mobile first</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>Media queries, mobile first</h1>
+
+    <section class="tarjetas">
+      <article class="tarjeta">Tarjeta 1</article>
+      <article class="tarjeta">Tarjeta 2</article>
+      <article class="tarjeta">Tarjeta 3</article>
+    </section>
+
+    <p class="aviso-orientacion">
+      Gira el móvil: este párrafo cambia de color en horizontal (<code>orientation: landscape</code>).
+    </p>
+
+    <button class="boton-hover">Pásame el ratón por encima</button>
+
+    <p class="aviso-esquema">
+      Esta frase usa <code>prefers-color-scheme</code>: cambia si tu sistema está en modo oscuro o claro.
+    </p>
+
+    <p id="info-ancho"></p>
+  </body>
+</html>

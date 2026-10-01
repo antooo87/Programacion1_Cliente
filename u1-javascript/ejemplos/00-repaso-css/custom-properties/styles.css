@@ -1,0 +1,54 @@
+/* :root es, en la práctica, el elemento <html>. Las variables definidas
+   aquí son visibles en TODO el documento porque se heredan igual que
+   cualquier otra propiedad CSS heredable. */
+:root {
+  --color-texto: #1f2937;
+  --color-acento: #4338ca;
+  --espaciado: 1rem;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+/* Esta caja SOBRESCRIBE --color-acento solo dentro de su propio alcance.
+   Cualquier hijo suyo que use var(--color-acento) ve este valor nuevo,
+   pero fuera de .caja-especial sigue valiendo el de :root */
+.caja-especial {
+  --color-acento: #dc2626;
+  border: 2px dashed var(--color-acento);
+  padding: var(--espaciado);
+  border-radius: 8px;
+}
+
+.caja-especial p {
+  color: var(--color-acento);
+}
+
+.caja-destacada {
+  margin-top: var(--espaciado);
+  padding: var(--espaciado);
+  border-radius: 8px;
+  background: var(--color-acento);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.controles {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.controles label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

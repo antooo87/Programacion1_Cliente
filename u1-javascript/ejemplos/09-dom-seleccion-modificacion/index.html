@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selección y modificación del DOM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>Selección y modificación del DOM</h1>
+
+    <p id="parrafo-objetivo" class="texto-normal">Texto original</p>
+
+    <label>
+      Escribe algo (incluso HTML, para ver la diferencia):
+      <input type="text" id="campo-texto" placeholder="<b>prueba esto</b>" />
+    </label>
+
+    <div class="comparacion">
+      <div>
+        <h2>textContent</h2>
+        <p id="salida-textcontent" class="caja-salida"></p>
+      </div>
+      <div>
+        <h2>innerHTML</h2>
+        <p id="salida-innerhtml" class="caja-salida"></p>
+      </div>
+    </div>
+
+    <button id="boton-clase">Alternar clase destacada</button>
+    <button id="boton-crear">Añadir elemento a la lista</button>
+    <ul id="lista-elementos"></ul>
+  </body>
+</html>
