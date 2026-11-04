@@ -7,5 +7,35 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+
+    <header>  
+      <h1> DESPERTAR DOM </h1>
+    </header>
+
+    <main>  
+      <section> 
+        <h2>Marcador</h2>
+      <p>PUNTOS: <span id="puntos">0</span></p>
+      <p> tiempo : <span id="tiempo">30</span></p>
+      <p> record: <span id="record">0</span></p>
+      <button  id="btn-empezar" type="button">EMPEZAR</button>
+      </section>
+
+      <section>
+        <h2> ZONA DE JUEGO </h2>
+          <div id="zona-juego">
+          <button  id="btn-objetivo" type="button">OBJETIVO</button>
+          </div>
+      </section>
+       <section>
+        <h2> HISTORIAL </h2>
+          <ul id="lista-partidas"></ul>
+      </section>
+    </main>
+    <footer>
+    <p>Hecho por Antonio</p>
+  </footer>
+
+  </body>
 </html>
