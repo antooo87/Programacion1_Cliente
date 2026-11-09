@@ -54,9 +54,15 @@ function historial() {
     
 }
 
+function modoOscuro(evento){
+    if(evento.key === 'd'){
+           document.body.classList.toggle("oscuro");
+    }
+}
 
 objetivo.addEventListener("click", atraparObjetivo);
 empezar.addEventListener("click", empezarPartida);
+document.addEventListener("keydown", modoOscuro);
 
 
 
