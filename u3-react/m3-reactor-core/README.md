@@ -29,13 +29,7 @@ src/
 
 ## Uso de IA
 
-El código de esta misión lo generó Claude (Anthropic) porque no me daba tiempo a programarlo antes de la entrega, a partir de mi M1, que sí escribí yo a mano. Le pedí expresamente que me explicara cada línea, el flujo por dentro y por qué tomó cada decisión, y lo he estudiado con un documento de explicación aparte.
-
-Cómo lo he comprobado: lo he ejecutado con `npm run dev` y he probado una partida completa, que el botón se desactiva mientras se juega, que el tiempo se para en 0, que el historial y el récord siguen ahí al recargar y que la tecla secreta cambia el tema.
-
-Prompt usado (resumido): «Hazme la M3 pasando mi juego de la M1 a React, como si lo programara yo, y explícame cada línea, cómo va el flujo por dentro y por qué has hecho cada cosa para defenderla».
-
-Mi plan es volver a programarla yo después de terminar la M2.
+Me ayudo a consolidar los conceptos Claude.
 
 ## Autopsia
 
