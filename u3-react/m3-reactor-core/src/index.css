@@ -1,0 +1,94 @@
+:root {
+  --color-fondo: #f4f4f8;
+  --color-texto: #1e1e2e;
+  --color-principal: #4f46e5;
+  --color-zona: #ffffff;
+  --color-objetivo: #ef4444;
+}
+
+.app.oscuro {
+  --color-fondo: #12121a;
+  --color-texto: #e8e8f0;
+  --color-principal: #818cf8;
+  --color-zona: #1e1e2e;
+  --color-objetivo: #f87171;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 16px;
+}
+
+.pista {
+  margin: 0;
+  opacity: 0.8;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.marcador p {
+  display: inline-block;
+  margin-right: 24px;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-principal);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.zona-juego {
+  position: relative;
+  height: 320px;
+  background: var(--color-zona);
+  border: 2px solid var(--color-principal);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mensaje-zona {
+  margin: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+.objetivo {
+  position: absolute;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--color-objetivo);
+}
+
+.lista-partidas {
+  padding-left: 20px;
+}
