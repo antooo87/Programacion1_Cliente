@@ -1,0 +1,40 @@
+{
+  "jugadores": [
+    {
+      "id": "1",
+      "nick": "Rayo_87",
+      "email": "rayo@correo.com",
+      "edad": 21,
+      "categoria": "pro",
+      "mensaje": "Vengo a por el récord",
+      "fecha": "2026-11-20T18:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "nick": "LentoPeroSeguro",
+      "email": "lento@correo.com",
+      "edad": 13,
+      "categoria": "novato",
+      "mensaje": "",
+      "fecha": "2026-11-21T10:05:00.000Z"
+    },
+    {
+      "id": "3",
+      "nick": "Mira",
+      "email": "mira@correo.com",
+      "edad": 34,
+      "categoria": "amateur",
+      "mensaje": "Juego con el portátil del trabajo",
+      "fecha": "2026-11-21T17:45:00.000Z"
+    },
+    {
+      "id": "4",
+      "nick": "",
+      "email": "esto-no-es-un-email",
+      "edad": "veinte",
+      "categoria": "pro",
+      "mensaje": "Registro corrupto a propósito",
+      "fecha": "ayer"
+    }
+  ]
+}
