@@ -1,4 +1,5 @@
 const BASE = "https://dummyjson.com";
+
 export async function obtenerProductos() {
 const r = await fetch(`${BASE}/products?limit=12`);
 if (!r.ok) throw new Error(`Error HTTP:${r.status}`);

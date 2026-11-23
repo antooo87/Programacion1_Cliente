@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import {obtenerProductos} from '../api.js'
 
-function ListaProductos() {
+function ListaProductos({onSeleccionar}) {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["productos"],
     queryFn: obtenerProductos,
@@ -16,7 +16,7 @@ function ListaProductos() {
   return (
     <ul>
       {data.map((dato) => (
-        <li key={dato.id}>
+        <li key={dato.id} onClick={() => onSeleccionar(dato.id)}>
           {dato.title} - {dato.price}
         </li>
       ))}
@@ -24,5 +24,6 @@ function ListaProductos() {
   );
   
 }
+
 
 export default ListaProductos;
