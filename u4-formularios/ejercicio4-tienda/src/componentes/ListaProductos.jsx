@@ -5,6 +5,7 @@ function ListaProductos({onSeleccionar}) {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["productos"],
     queryFn: obtenerProductos,
+    staleTime: 60_000,
 });
     if(isPending === true){
     return <p>Cargando productos</p>;
